@@ -10,7 +10,7 @@
 		var path = './../../../';
 	</script>
 	<script src="./../../../assets/js/combined.js"></script>
-	<title>はじめに - SimpleAuth - Auth パッケージ - FuelPHP ドキュメント</title>
+	<title>はじめに - Simpleauth - Auth パッケージ - FuelPHP ドキュメント</title>
 </head>
 <body>
 	<div id="container">
@@ -43,7 +43,7 @@
 		</div>
 
 		<div id="main">
-			<h2>SimpleAuth - はじめに</h2>
+			<h2>Simpleauth - はじめに</h2>
 
 			<p>
 				その名前が示すように Simpleauth は、Auth パッケージに含まれている単純な認証システムです。
@@ -66,7 +66,7 @@
 			<h3 id="acl">ACL's</h3>
 
 			<p>
-				SimpleAuth には、以下の ACL の仕組みをサポートしている ACL ドライバが付属しています：
+				Simpleauth には、以下の ACL の仕組みをサポートしている ACL ドライバが付属しています：
 			</p>
 
 			<ul>
@@ -166,7 +166,7 @@
 							<td><pre class="php"><code>array()</code></pre>
 							</td>
 							<td>
-								SimpleAuth Group ドライバが使用するグループ定義。
+								Simpleauth Group ドライバが使用するグループ定義。
 								グループ配列構造の説明については、デフォルト設定のファイルを参照してください。
 							</td>
 						</tr>
@@ -176,7 +176,7 @@
 							<td><pre class="php"><code>array()</code></pre>
 							</td>
 							<td>
-								SimpleAuth ACL ドライバが使用するロール定義。
+								Simpleauth ACL ドライバが使用するロール定義。
 								ロール配列構造の説明については、デフォルト設定のファイルを参照してください。
 							</td>
 						</tr>
@@ -186,9 +186,9 @@
 							<td><pre class="php"><code>'put_some_salt_in_here'</code></pre>
 							</td>
 							<td>
-								SimpleAuth で利用されるパスワードをよりセキュアにするために、パスワードのハッシュ値をデータベースに保存する際に、サルトが使われています。
+								Simpleauth で利用されるパスワードをよりセキュアにするために、パスワードのハッシュ値をデータベースに保存する際に、サルトが使われています。
 								デフォルトのものから、ランダムな文字列に変更することを忘れないように！
-								パスワードのハッシュ化にあたり、 SimpleAuth は非常にセキュアな機構である <a href="http://en.wikipedia.org/wiki/PBKDF2" target="_blank">PBKDF2</a>　を利用しています。
+								パスワードのハッシュ化にあたり、 Simpleauth は非常にセキュアな機構である <a href="http://en.wikipedia.org/wiki/PBKDF2" target="_blank">PBKDF2</a>　を利用しています。
 							</td>
 						</tr>
 						<tr>
@@ -220,7 +220,7 @@
 			<h3 id="database">データベーステーブル</h3>
 
 			<p>
-				SimpleAuth は単一のテーブルに依存しています。 Auth パッケージにはこのテーブルを作成するために必要なマイグレーションファイルが含まれています。<br />
+				Simpleauth は単一のテーブルに依存しています。 Auth パッケージにはこのテーブルを作成するために必要なマイグレーションファイルが含まれています。<br />
 				<code>oil refine migrate --packages=auth</code> を実行すればあなたのために作成されたテーブルを持つことができます。
 			</p>
 
