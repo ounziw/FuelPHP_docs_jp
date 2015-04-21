@@ -122,8 +122,8 @@ $this->param('month');
 $this->param('id');</code></pre>
 
 			<p class="note">
-				Note that as a named parameter is a regex, every named parameter counts as a backreference.
-				So in a route like ':name/(\d{2})', the backreference for your two-digit segment is $2, not $1!</p>
+				名前付きパラメータは正規表現で、後方参照として数えられることに注意しましょう。
+				例えば ':name/(\d{2})' において、2 桁の数字への後方参照は $2 であって、$1 ではありません。</p>
 
 
 			<h3 id="http_verb">HTTP の動詞によるルーティング</h3>
@@ -166,22 +166,22 @@ $this->param('id');</code></pre>
 echo Html::anchor(Router::get('admin_overview'), 'Overview');</code></pre>
 
 			<p class="note">
-				Note that this currently only works for routes that are defined in <kbd>app/config/routes.php</kbd>, not for module routes.
+				今のところ、 <kbd>app/config/routes.php</kbd> に定義されているルートのみで動作することに注意しましょう。モジュールのルートでは動作しません。
 			</p>
 
-			<h3 id="inline_routes">Inline routes</h3>
+			<h3 id="inline_routes">インラインルート</h3>
 
 			<p>
-				A route does not have to resolve to a controller method. FuelPHP also supports inline routes, which are defined as a Closure
-				that replaces the controller method. Like controller methods, inline routes MUST return a Response object, either by forging
-				one manually, or as the result of executing a forged Request.
+				ルートはコントローラのメソッドに解決される必要はありません。 FuelPHP はコントローラメソッドを置き換える Closure として定義される
+				インラインルートもサポートします。コントローラのメソッドと同様にインラインルートは Response オブジェクト を返さなければなりません。
+				この Response オブジェクトは 自分で forge するか、 forge された Request を実行した結果として返します。
 			</p>
 
-			<p>Example route:</p>
+			<p>ルートの例:</p>
 
 			<pre class="php"><code>return array(
     'secret/mystuff' => function () {
-		// this route only works in development
+		// このルートは development 環境でのみ動作します
 		if (\Fuel::$env == \Fuel::DEVELOPMENT)
 		{
 			return \Request::forge('secret/mystuff/keepout', false)->execute();
@@ -192,9 +192,9 @@ echo Html::anchor(Router::get('admin_overview'), 'Overview');</code></pre>
 		}
 };</code></pre>
 
-			<h3 id="module_routing">Modules &amp; Routing</h3>
+			<h3 id="module_routing">モジュールとルーティング</h3>
 
-			<p><a href="modules.html#module_routing">how modules handle routing をお読みください</a>。</p>
+			<p><a href="modules.html#module_routing">モジュールがどのようにルーティングを扱うか</a> をお読みください。</p>
 
 		</div>
 
